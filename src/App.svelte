@@ -12,21 +12,21 @@
       subtitle: 'Learn web development the right way',
       description:
         "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-      imgUrl,
+      imgUrl
     }, {
       id: 'm1',
       title: 'Coding Bootcamp',
       subtitle: 'Learn web development the right way',
       description:
         "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-      imgUrl,
+      imgUrl
     }, {
       id: 'm1',
       title: 'Coding Bootcamp',
       subtitle: 'Learn web development the right way',
       description:
         "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-      imgUrl,
+      imgUrl
     },
     {
       id: 'm2',
@@ -34,9 +34,8 @@
       subtitle: 'Code off!',
       description:
         'Svelters and Reactors will go head-to-head in this meeting of the frontend minds! Join us to find out who can build a Yelp replica faster.',
-      imgUrl,
-    }
-  ];
+      imgUrl
+    }];
 </script>
 
 <style>

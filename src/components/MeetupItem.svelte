@@ -1,4 +1,7 @@
 <script>
+  import Icon from 'svelte-awesome';
+  import { ellipsisH } from 'svelte-awesome/icons';
+
   export let id;
   export let title;
   export let subtitle;
@@ -47,17 +50,27 @@
   .content {
     display: flex;
     padding: 1rem;
+    padding-bottom: 0;
     flex-direction: column;
     height: 18rem;
     justify-content: space-evenly;
   }
 
+  .description {
+    margin-top: 2rem;
+    line-height: 1.8rem;
+  }
+
   .footer {
-    align-items: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    height: 100%;
+    padding: 0 1rem;
     width: 100%;
+  }
+
+  .icon {
+    margin-left: auto;
+    margin-top: auto;
   }
 </style>
 
@@ -79,7 +92,9 @@
     </div>
 
     <div class="footer">
-      
+      <span class="icon">
+        <Icon data={ellipsisH} scale="1.8" />
+      </span>
     </div>
 
   </div>
