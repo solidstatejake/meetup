@@ -1,6 +1,5 @@
 <script>
-  import Icon from 'svelte-awesome';
-  import { ellipsisH } from 'svelte-awesome/icons';
+  import Icon, {ellipsisH} from "svelte-awesome";
 
   export let id;
   export let title;
@@ -8,6 +7,32 @@
   export let description;
   export let imgUrl;
 </script>
+
+<article {id}>
+
+  <div class="image">
+    <img src={imgUrl} alt={title} />
+  </div>
+
+  <div class="content">
+
+    <header>
+      <h1>{title}</h1>
+      <h3>{subtitle}</h3>
+    </header>
+
+    <div>
+      <p class="description">{description}</p>
+    </div>
+
+    <div class="footer">
+      <span class="icon">
+        <Icon data={ellipsisH} scale="1.8" />
+      </span>
+    </div>
+
+  </div>
+</article>
 
 <style>
   article {
@@ -73,29 +98,3 @@
     margin-top: auto;
   }
 </style>
-
-<article>
-
-  <div class="image">
-    <img src={imgUrl} alt={title} />
-  </div>
-
-  <div class="content">
-
-    <header>
-      <h1>{title}</h1>
-      <h3>{subtitle}</h3>
-    </header>
-
-    <div>
-      <p class="description">{description}</p>
-    </div>
-
-    <div class="footer">
-      <span class="icon">
-        <Icon data={ellipsisH} scale="1.8" />
-      </span>
-    </div>
-
-  </div>
-</article>

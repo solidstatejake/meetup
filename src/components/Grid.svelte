@@ -1,3 +1,7 @@
+<main id="grid">
+  <slot />
+</main>
+
 <style>
   main {
     display: grid;
@@ -8,7 +12,3 @@
     margin-top: calc(var(--nav-h) * 2);
   }
 </style>
-
-<main>
-  <slot />
-</main>
