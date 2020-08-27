@@ -1,5 +1,7 @@
 <script>
-  import Icon, {ellipsisH} from "svelte-awesome";
+  /* @typescript-eslint/ban-ts-comment */
+  import Icon from "svelte-awesome";
+  import { ellipsisH } from "svelte-awesome/icons";
 
   export let id;
   export let title;
