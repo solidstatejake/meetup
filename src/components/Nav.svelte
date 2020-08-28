@@ -9,7 +9,7 @@
 <style>
   header {
     align-items: center;
-    background: var(--indigo-primary);
+    background: var(--indigo);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.26);
     color: #f2f2f2;
     display: flex;
