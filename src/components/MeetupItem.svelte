@@ -2,11 +2,11 @@
   import Icon from "svelte-awesome";
   import { ellipsisH } from "svelte-awesome/icons";
 
-  export let id;
   export let title;
   export let subtitle;
   export let description;
   export let imgUrl;
+  const id = title.split(" ").join("-").toLowerCase().replace(/\W/g, '').replace('_', '');
 </script>
 
 <article {id}>
