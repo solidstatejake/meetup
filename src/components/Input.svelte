@@ -2,10 +2,10 @@
   export let textarea = false;
   export let label = "";
   const id = label.split(" ").join("-").toLowerCase();
-  export let value = "";
   export let type = "";
   export let rows;
   export let required = false;
+  export let value;
 
   if (textarea && type) {
     throw new Error(
@@ -29,13 +29,14 @@
   <label for={id}>{label}</label>
   {#if textarea}
     <textarea
-      {id}
       autocomplete="on"
       autocapitalize="sentences"
       name={id}
+      spellcheck="true"
+      {id}
       {required}
       {rows}
-      spellcheck="true"
+      {value}
       on:input />
     <!--
         Cannot have dynamic 'type' attr if input is two-way bound.
@@ -43,7 +44,7 @@
         where this component is consumed.
     -->
   {:else}
-    <input {type} {required} {id} on:input />
+    <input {type} {required} {id} {value} on:input />
   {/if}
 
   <!-- {:else if type === 'password'}
@@ -81,9 +82,11 @@
     align-items: center;
     width: 100%;
   }
+
   textarea {
     margin-left: 20px;
   }
+
   label {
     font-size: 1.3rem;
   }
