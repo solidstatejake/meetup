@@ -3,7 +3,7 @@
 </script>
 
 <header>
-  <p>Awesome!</p>
+  <h1>Awesome!</h1>
 </header>
 
 <style>

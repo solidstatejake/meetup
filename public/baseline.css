@@ -1,0 +1,100 @@
+:root {
+  --off-white: #fafafa;
+  --dark-grey: #292828;
+  --danger: #ea4848;
+  --success: #2f982f;
+  --blue: #3a96f0;
+  --light-blue: #59a6f3;
+  --indigo: #0063c7;
+
+  --border-radius: 2px;
+  --body-bg: var(--off-white);
+  --circle-radius: 50%;
+  --letter-spacing: 0.3px;
+  --link-color: var(--blue);
+  --link-hover-color: var(--light-blue);
+  --link-visited-color: var(--indigo);
+  --input-height: 30px;
+  --input-width: 300px;
+  --text-area-height: 150px;
+  --text-area-width: 300px;
+  --btn-bg: var(--blue);
+  --btn-height: 35px;
+  --btn-width: 120px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  border-bottom: 1px solid var(--link-color);
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  border-bottom: 1px solid var(--link-hover-color);
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+
+a:visited:hover {
+  border-bottom-color: var(--indigo);
+}
+
+body {
+  background-color: #fafafa;
+  height: 100%;
+  letter-spacing: var(--letter-spacing);
+  position: relative;
+  width: 100%;
+}
+
+button {
+  background-color: var(--blue);
+  border: 1px solid var(--indigo);
+  border-radius: var(--border-radius);
+  color: white;
+  height: var(--btn-height);
+  outline: none;
+  width: var(--btn-width);
+}
+
+button:hover {
+  background-color: var(--light-blue);
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #e2e2e2;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+input {
+  height: 40px;
+  padding: 5px 10px;
+  width: var(--input-width);
+}
+
+textarea {
+  border-radius: 3px;
+  padding: 10px;
+  height: 150px;
+  resize: none;
+  width: 300px;
+}
