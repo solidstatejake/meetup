@@ -1,26 +1,46 @@
 :root {
   --off-white: #fafafa;
-  --dark-grey: #292828;
   --danger: #ea4848;
   --success: #2f982f;
   --blue: #3a96f0;
   --light-blue: #59a6f3;
-  --indigo: #0063c7;
+  --dark-blue: #0063c7;
+  --indigo: #541fff;
+  --deep-blush: #ea6d84;
+  --watermelon: #fa6c88;
+  --denim: #266fb7;
+  --slate-blue: #4d7d95;
+  --deep-blue: #006a9e;
+  --ice: #c8f7ff;
+  --goblin-green: #458a59;
+  --dark-green: #37822c;
+  --light-green: #70b85d;
+  --yellow: #ffe69f;
+  --tan: #ffa05e;
+  --manilla: #ffe6d8;
+  --creamsicle: #ff8562;
+  --red-damask: #d86a4b;
+  --fire: #ff6b47;
+  --brown: #a36455;
+  --dark-brown: #57423e;
+  --dark-grey: #292828;
 
   --border-radius: 2px;
   --body-bg: var(--off-white);
+  --btn-bg: var(--blue);
+  --btn-border-color: var(--dark-blue);
+  --btn-height: 35px;
+  --btn-width: 120px;
   --circle-radius: 50%;
   --letter-spacing: 0.3px;
   --link-color: var(--blue);
   --link-hover-color: var(--light-blue);
-  --link-visited-color: var(--indigo);
-  --input-height: 30px;
+  --link-visited-color: var(--dark-blue);
+  --input-height: 40px;
   --input-width: 300px;
   --text-area-height: 150px;
   --text-area-width: 300px;
-  --btn-bg: var(--blue);
-  --btn-height: 35px;
-  --btn-width: 120px;
+  --text-area-padding: 10px;
 }
 
 * {
@@ -51,7 +71,7 @@ a:visited {
 }
 
 a:visited:hover {
-  border-bottom-color: var(--indigo);
+  border-bottom-color: var(--dark-blue);
 }
 
 body {
@@ -63,8 +83,8 @@ body {
 }
 
 button {
-  background-color: var(--blue);
-  border: 1px solid var(--indigo);
+  background-color: var(--btn-bg);
+  border: 1px solid var(--btn-border-color);
   border-radius: var(--border-radius);
   color: white;
   height: var(--btn-height);
@@ -81,20 +101,20 @@ select,
 textarea {
   border: 1px solid #e2e2e2;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: var(--card-shadow);
   outline: none;
 }
 
 input {
-  height: 40px;
+  height: var(--input-height);
   padding: 5px 10px;
   width: var(--input-width);
 }
 
 textarea {
   border-radius: 3px;
-  padding: 10px;
-  height: 150px;
+  padding: var(--text-area-padding);
+  height: var(--text-area-height);
   resize: none;
-  width: 300px;
+  width: var(--text-area-width);
 }

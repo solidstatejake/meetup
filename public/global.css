@@ -2,8 +2,6 @@
 @import url(./baseline.css);
 
 :root {
-  /** colours */
-  --indigo-primary: #541fff;
 
   /** font */
   --font-roboto: "Roboto Slab", sans-serif;
@@ -33,7 +31,7 @@
   --full-height: 100%;
 
   /** miscellaneous  */
-  --card-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  --card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 body {
