@@ -74,22 +74,38 @@
 </div>
 
 <style>
-  .form-control {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
+  input,
+  select,
   textarea {
-    margin-left: 20px;
+    width: 100vw;
   }
 
   label {
-    font-size: 1.3rem;
+    /* margin-bottom: 5px; */
   }
-  /*! HACK This is a hack. May have to target label for textarea w JavaScript */
-  label[for="description"] {
-    align-self: flex-start;
+
+  .form-control {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 400px) {
+    input,
+    select,
+    textarea {
+      border-radius: var(--border-radius);
+      width: var(--input-width);
+    }
+
+    /*! HACK This is a hack. May have to target label for textarea w JavaScript */
+    label[for="description"] {
+      align-self: flex-start;
+    }
+    .form-control {
+      flex-direction: row;
+    }
   }
 </style>

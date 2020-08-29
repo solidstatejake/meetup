@@ -26,17 +26,14 @@
   --card-h-md: 500px;
   --card-h-lg: 600px;
   --card-h-xl: 700px;
-  --nav-h: 6rem;
+  --nav-h: 8rem;
   --full-width: 100%;
   --full-height: 100%;
-
-  /** miscellaneous  */
-  --card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 body {
   font-family: var(--font-roboto), "Helvetica Neue", sans-serif;
-  min-width: 360px;
+  min-width: 300px;
 }
 
 h1 {
@@ -49,9 +46,11 @@ h3 {
   font-weight: lighter;
 }
 
-label {
-  /* display: block; */
-  border-bottom: 1px solid var(--dark-grey);
+input,
+select,
+textarea {
+  border-left: none;
+  border-right: none;
 }
 
 input:disabled {

@@ -6,7 +6,12 @@
   export let subtitle;
   export let description;
   export let imgUrl;
-  const id = title.split(" ").join("-").toLowerCase().replace(/\W/g, '').replace('_', '');
+  export let id = title
+    .split(" ")
+    .join("-")
+    .toLowerCase()
+    .replace(/\W/g, "")
+    .replace("_", "");
 </script>
 
 <article {id}>

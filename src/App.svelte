@@ -1,4 +1,5 @@
 <script>
+  import Button from "./components/Button.svelte";
   import Grid from "./components/Grid.svelte";
   import Input from "./components/Input.svelte";
   import MeetupItem from "./components/MeetupItem.svelte";
@@ -10,6 +11,7 @@
     imgUrl = "http://blasdha.io",
     email = "ssj@makewithjake.io",
     description = "Description";
+
   let meetupList = meetups;
 
   const clearInputs = () => {
@@ -19,19 +21,12 @@
     email = "";
     description = "";
   };
-  
+
   const addMeetup = () => {
     const newMeetup = { title, subtitle, imgUrl, email, description };
     meetupList = [newMeetup, ...meetupList];
     clearInputs();
   };
-
-
-  $: console.log(title);
-  $: console.log(subtitle);
-  $: console.log(imgUrl);
-  $: console.log(email);
-  $: console.log(description);
 </script>
 
 <Nav />
@@ -74,12 +69,14 @@
         value={description}
         on:input={({ target }) => (description = target.value)} />
 
-      <button type="submit">Submit</button>
+      <div class="btn-container">
+        <Button outlineDanger>Clear</Button>
+        <Button outlineSuccess type="submit">Submit</Button>
+      </div>
     </form>
 
   </div>
 </main>
-
 <Grid>
   {#each meetupList as meetup (meetup)}
     <MeetupItem {...meetup} />
@@ -87,22 +84,42 @@
 </Grid>
 
 <style>
-  button {
-    margin-left: auto;
-  }
-
   form {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: calc(2 * var(--nav-h));
-    height: 400px;
-    width: min-content;
+    height: 500px;
+    min-width: 300px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
 
   .form-container {
     display: flex;
     justify-content: center;
+  }
+
+  @media only screen and (min-width: 400px) {
+    form {
+      height: 400px;
+      width: 400px;
+    }
+
+    .btn-container {
+      justify-content: space-between;
+      margin-left: auto;
+      width: var(--text-area-width);
+    }
+  }
+  @media only screen and (min-width: 500px) {
+    form {
+      width: 450px;
+    }
   }
 </style>

@@ -2,12 +2,12 @@
 
 </script>
 
-<header>
+<nav>
   <h1>Awesome!</h1>
-</header>
+</nav>
 
 <style>
-  header {
+  nav {
     align-items: center;
     background: var(--indigo);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.26);
