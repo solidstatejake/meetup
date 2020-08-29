@@ -2,7 +2,6 @@
   export let textarea = false;
   export let label = "";
   export let type = "";
-  export let rows;
   export let required = false;
   export let value;
   const id = label
@@ -15,11 +14,6 @@
   if (textarea && type) {
     throw new Error(
       `Input component cannot be both a textarea and an input (of type ${type}).\nYou have passed both the type attribute and the textarea attribute. Verify that you meant to do this.`
-    );
-  }
-  if (type && rows) {
-    throw new Error(
-      "Input component cannot have both a rows attribute and a type attribute.\nThe rows attribute does not apply to element of type input. The type attribute does not apply to element of type textarea. You have to pick one!"
     );
   }
 </script>
@@ -40,7 +34,6 @@
       spellcheck="true"
       {id}
       {required}
-      {rows}
       {value}
       on:input />
     <!--
