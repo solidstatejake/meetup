@@ -45,32 +45,6 @@
     <input {type} {required} {id} {value} on:input />
   {/if}
 
-  <!-- {:else if type === 'password'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'checkbox'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'radio'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'color'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'date'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'number'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'range'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'tel'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'file'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'search'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'submit'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'time'}
-    <input type="" {required} {id} bind:value />
-  {:else if type === 'week'}
-    <input type="" {required} {id} bind:value /> -->
 </div>
 
 <style>
