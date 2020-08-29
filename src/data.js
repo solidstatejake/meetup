@@ -10,23 +10,23 @@ export default [
     imgUrl,
   },
   {
-    id: "m1",
-    title: "Coding Bootcamp",
-    subtitle: "Learn web development the right way",
-    description:
-      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-    imgUrl,
-  },
-  {
-    id: "m1",
-    title: "Coding Bootcamp",
-    subtitle: "Learn web development the right way",
-    description:
-      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-    imgUrl,
-  },
-  {
     id: "m2",
+    title: "Coding Bootcamp",
+    subtitle: "Learn web development the right way",
+    description:
+      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
+    imgUrl,
+  },
+  {
+    id: "m3",
+    title: "Coding Bootcamp",
+    subtitle: "Learn web development the right way",
+    description:
+      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
+    imgUrl,
+  },
+  {
+    id: "m4",
     title: "Svelte vs React",
     subtitle: "Code off!",
     description:
