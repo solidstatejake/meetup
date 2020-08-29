@@ -12,6 +12,7 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@types/chroma-js": "^2.0.0",
     "@types/shortid": "0.0.29",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "prettier-plugin-svelte": "^1.1.1",
     "rollup": "^2.3.4",
@@ -20,7 +21,8 @@
     "rollup-plugin-terser": "^7.0.0",
     "shortid": "^2.2.15",
     "svelte": "^3.0.0",
-    "svelte-check": "^1.0.25"
+    "svelte-check": "^1.0.25",
+    "svelte-preprocess": "^4.1.2"
   },
   "dependencies": {
     "chroma-js": "^2.1.0",
