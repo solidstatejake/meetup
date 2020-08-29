@@ -1,11 +1,16 @@
 <script>
   export let textarea = false;
   export let label = "";
-  const id = label.split(" ").join("-").toLowerCase();
   export let type = "";
   export let rows;
   export let required = false;
   export let value;
+  const id = label
+    .split(" ")
+    .join("-")
+    .toLowerCase()
+    .replace(/\W/g, "")
+    .replace("_", "");
 
   if (textarea && type) {
     throw new Error(
