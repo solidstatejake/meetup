@@ -1,8 +1,8 @@
+/*TODO Convert to Sass file. */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:200,300,regular,800);
 @import url(./baseline.css);
 
 :root {
-
   /** font */
   --font-roboto: "Roboto Slab", sans-serif;
   --font-size-nav-sm: 1.6rem;
