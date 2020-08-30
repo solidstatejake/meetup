@@ -83,7 +83,7 @@
   {/each}
 </Grid>
 
-<style>
+<style lang="scss">
   form {
     align-items: flex-start;
     display: flex;

@@ -40,68 +40,55 @@
   <slot>Click me!</slot>
 </button>
 
-<style>
-  .pill {
-    border-radius: var(--pill-radius);
-  }
+<style lang='sass'>
+  .center 
+    margin-left: auto
+    margin-right: auto
+  .danger 
+    background-color: var(--danger)
+  
+  .inline 
+    display: inline
+  
+  .inline-block 
+    display: inline-block
+  
+  .left 
+    margin-right: auto
+  
+  .link :not(.outline) :not(.outline-success) :not(.outline-danger) 
+    color: white
+  
+  .link:hover:not(.outline) :not(.outline-success) :not(.outline-danger) 
+    border-bottom: none
+    text-decoration: none
+  
+  .outline 
+    background-color: var(--body-bg)
+    border: 2px solid var(--blue)
+    color: var(--blue)
+  
+  .outline-danger 
+    background-color: transparent
+    border: 2px solid var(--danger)
+    color: var(--danger)
+  
+  .outline-success 
+    background-color: transparent
+    border: 2px solid var(--success)
+    color: var(--success)
+  
+  .pill 
+    border-radius: var(--pill-radius)
+  
+  .primary 
+    background-color: var(--blue)
 
-  .primary {
-    background-color: var(--blue);
-  }
-
-  .danger {
-    background-color: var(--danger);
-  }
-
-  .success {
-    background-color: var(--success);
-  }
-
-  .outline {
-    background-color: var(--body-bg);
-    border: 2px solid var(--blue);
-    color: var(--blue);
-  }
-
-  .outline-success {
-    background-color: transparent;
-    border: 2px solid var(--success);
-    color: var(--success);
-  }
-
-  .outline-danger {
-    background-color: transparent;
-    border: 2px solid var(--danger);
-    color: var(--danger);
-  }
-
-  .link :not(.outline) :not(.outline-success) :not(.outline-danger) {
-    color: white;
-  }
-
-  .link:hover:not(.outline) :not(.outline-success) :not(.outline-danger) {
-    border-bottom: none;
-    text-decoration: none;
-  }
-
-  .left {
-    margin-right: auto;
-  }
-
-  .right {
-    margin-left: auto;
-  }
-
-  .center {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .inline {
-    display: inline;
-  }
-
-  .inline-block {
-    display: inline-block;
-  }
+  .right 
+    margin-left: auto
+    
+  .success 
+    background-color: var(--success)
+  
+  
 </style>
