@@ -17,17 +17,7 @@
   export let outlineSuccess = false;
   export let outlineDanger = false;
 
-  const el = document.getElementById;
-
   const id = shortid.generate();
-
-  /*  onMount(() => {
-    _(id).addEventListener("hover", function() {
-      this.style.backgroundColor = chroma(
-        this.style.backgroundColor
-      ).darken();
-    });
-  }); */
 </script>
 
 <button
