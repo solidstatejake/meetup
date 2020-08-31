@@ -1,6 +1,5 @@
-/*TODO Convert to Sass file. */
-
 :root {
+  --awesome: #123123;
   --off-white: #fafafa;
   --danger: #ea4848;
   --success: #2f982f;
@@ -26,7 +25,6 @@
   --brown: #a36455;
   --dark-brown: #57423e;
   --dark-grey: #292828;
-
   --border-radius: 4px;
   --body-bg: var(--off-white);
   --btn-bg: var(--blue);
@@ -35,11 +33,9 @@
   --btn-font-size: 1.2rem;
   --btn-height: 35px;
   --btn-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-  --btn-hover-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.24),
-    0 14px 50px 0 rgba(0, 0, 0, 0.19);
+  --btn-hover-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.24), 0 14px 50px 0 rgba(0, 0, 0, 0.19);
   --btn-width: 120px;
-  --card-shadow: 0 0 1px 0 rgba(66, 66, 66, 0.1),
-    0 0 6px 2px rgba(66, 66, 66, 0.15);
+  --card-shadow: 0 0 1px 0 rgba(66, 66, 66, 0.1), 0 0 6px 2px rgba(66, 66, 66, 0.15);
   --circle-radius: 50%;
   --letter-spacing: 0.3px;
   --link-color: var(--blue);
@@ -52,49 +48,38 @@
   --shadow-raised: 0 0 20px rgba(0, 0, 0, 0.15);
   --text-area-height: 150px;
   --text-area-width: 300px;
-  --text-area-padding: 10px;
-}
+  --text-area-padding: 10px; }
 
 * {
   box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 a {
   border-bottom: 1px solid var(--link-color);
   color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  border-bottom: 1px solid var(--link-hover-color);
-}
-
-a:visited {
-  color: var(--link-visited-color);
-}
-
-a:visited:hover {
-  border-bottom-color: var(--dark-blue);
-}
+  text-decoration: none; }
+  a:hover {
+    color: var(--link-hover-color);
+    border-bottom: 1px solid var(--link-hover-color); }
+  a:visited {
+    color: var(--link-visited-color); }
+    a:visited:hover {
+      border-bottom-color: var(--dark-blue); }
 
 body {
   background-color: #fafafa;
   height: 100%;
   letter-spacing: var(--letter-spacing);
   position: relative;
-  width: 100%;
-}
+  width: 100%; }
 
 button {
   background-color: var(--btn-bg);
@@ -111,23 +96,14 @@ button {
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transform-style: preserve-3d;
-  width: var(--btn-width);
-}
+  width: var(--btn-width); }
+  button:hover {
+    background-color: var(--dark-blue);
+    box-shadow: var(--btn-hover-shadow);
+    transform: perspective(100px) scale(1.1) translateY(-1px); }
+  button:active {
+    box-shadow: none; }
 
-button:hover {
-  background-color: var(--dark-blue);
-  box-shadow: var(--btn-hover-shadow);
-  transform: perspective(100px) scale(1.1) translateY(-1px);
-}
-
-/* must put :active after :hover, :link,
-   and :visited, else :active is overridden */
-button:active {
-  box-shadow: none;
-}
-
-input,
-select,
 textarea {
   border-radius: 0;
   border: none;
@@ -136,45 +112,34 @@ textarea {
   min-width: 300px;
   letter-spacing: var(--letter-spacing);
   outline: none;
-  width: 100vw;
-}
+  width: 100vw; }
 
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: var(--shadow-raised);
-}
+  box-shadow: var(--shadow-raised); }
 
 label {
   border-bottom: none;
   font-size: 1.2rem;
   margin-bottom: 7px;
-}
+  border-bottom: 1px solid var(--dark-grey); }
 
-input,
-select {
+input, select {
   height: var(--input-height);
   padding: 5px 10px;
   text-align: center;
-  width: var(--input-width);
-}
+  width: var(--input-width); }
 
 textarea {
   padding: var(--text-area-padding);
   height: var(--text-area-height);
   resize: none;
-  width: var(--text-area-width);
-}
+  width: var(--text-area-width); }
 
 @media only screen and (min-width: 400px) {
-  input,
-  select,
-  textarea {
+  input, select, textarea {
     border-radius: var(--border-radius);
-    text-align: start;
-  }
-
+    text-align: start; }
   label {
-    border-bottom: 1px solid var(--dark-grey);
-  }
-}
+    border-bottom: 1px solid var(--dark-grey); } }
