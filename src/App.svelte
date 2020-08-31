@@ -1,5 +1,6 @@
 <script>
   import Button from "./components/Button.svelte";
+  import Footer from "./components/Footer.svelte";
   import Grid from "./components/Grid.svelte";
   import Input from "./components/Input.svelte";
   import MeetupItem from "./components/MeetupItem.svelte";
@@ -70,18 +71,22 @@
         on:input={({ target }) => (description = target.value)} />
 
       <div class="btn-container">
-        <Button outlineDanger>Clear</Button>
+        <Button outlineDanger on:click={clearInputs}>Clear</Button>
         <Button outlineSuccess type="submit">Submit</Button>
       </div>
     </form>
 
   </div>
 </main>
+
+<Footer />
+
 <Grid>
   {#each meetupList as meetup (meetup)}
     <MeetupItem {...meetup} />
   {/each}
 </Grid>
+
 
 <style lang="scss">
   form {
