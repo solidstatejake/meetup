@@ -97,14 +97,14 @@ button {
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transform-style: preserve-3d;
   width: var(--btn-width); }
-  button:hover {
+  button:hover, button:focus {
     background-color: var(--dark-blue);
     box-shadow: var(--btn-hover-shadow);
     transform: perspective(100px) scale(1.1) translateY(-1px); }
   button:active {
     box-shadow: none; }
 
-textarea {
+input, select, textarea {
   border-radius: 0;
   border: none;
   box-shadow: var(--shadow);
@@ -112,30 +112,31 @@ textarea {
   min-width: 300px;
   letter-spacing: var(--letter-spacing);
   outline: none;
-  width: 100vw; }
-
-input:focus,
-select:focus,
-textarea:focus {
-  box-shadow: var(--shadow-raised); }
+  width: 100vw;
+  transition: box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28), transform 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
 
 label {
-  border-bottom: none;
+  border-bottom: 1px solid var(--dark-grey);
   font-size: 1.2rem;
-  margin-bottom: 7px;
-  border-bottom: 1px solid var(--dark-grey); }
+  margin-bottom: 7px; }
 
 input, select {
   height: var(--input-height);
   padding: 5px 10px;
   text-align: center;
   width: var(--input-width); }
+  input:focus, select:focus {
+    box-shadow: var(--btn-hover-shadow);
+    transform: perspective(100px) scale(1.03) translateY(-3px); }
 
 textarea {
-  padding: var(--text-area-padding);
   height: var(--text-area-height);
+  padding: var(--text-area-padding);
   resize: none;
   width: var(--text-area-width); }
+  textarea:focus {
+    box-shadow: var(--btn-hover-shadow);
+    transform: perspective(100px) scale(1.03) translateY(-10px); }
 
 @media only screen and (min-width: 400px) {
   input, select, textarea {

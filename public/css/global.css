@@ -1,57 +1,37 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:200,300,regular,800);
-@import url(./baseline.css);
-
 :root {
-  /** font */
-  --font-roboto: "Roboto Slab", sans-serif;
+  --font-roboto: "Roboto Slab";
   --font-size-nav-sm: 1.6rem;
   --font-size-normalize: 62.5%;
   --font-size-p-sm: 1.2rem;
-
-  /** header sizes */
   --font-size-h1-sm: 2.5rem;
   --font-size-h2-sm: 2rem;
   --font-size-h3-sm: 1.6rem;
   --font-size-h4-sm: 1.5rem;
   --font-size-h5-sm: 1.35rem;
   --font-size-h6-sm: 1.2rem;
-
-  /** element sizes */
   --card-w-sm: 360px;
   --card-w-md: 400px;
   --card-w-lg: 440px;
   --card-w-xl: 500px;
-  --card-h-sm: 500px;
+  --card-h-sm: 5000px;
   --card-h-md: 500px;
   --card-h-lg: 600px;
   --card-h-xl: 700px;
   --nav-h: 8rem;
   --full-width: 100%;
-  --full-height: 100%;
-}
+  --full-height: 100%; }
 
 body {
   font-family: var(--font-roboto), "Helvetica Neue", sans-serif;
-  min-width: 300px;
-}
+  min-width: 300px; }
 
 h1 {
   font-size: var(--font-size-h1-sm);
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 h3 {
   font-size: var(--font-size-h3-sm);
-  font-weight: lighter;
-}
-
-input,
-select,
-textarea {
-  border-left: none;
-  border-right: none;
-}
+  font-weight: lighter; }
 
 input:disabled {
-  opacity: .7;
-}
+  opacity: .7; }

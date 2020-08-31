@@ -1,0 +1,156 @@
+\:root
+  --awesome: #123123
+  --off-white: #fafafa
+  --danger: #ea4848
+  --success: #2f982f
+  --blue: #3a96f0
+  --light-blue: #59a6f3
+  --dark-blue: #0063c7
+  --indigo: #541fff
+  --deep-blush: #ea6d84
+  --watermelon: #fa6c88
+  --denim: #266fb7
+  --slate-blue: #4d7d95
+  --deep-blue: #006a9e
+  --ice: #c8f7ff
+  --goblin-green: #458a59
+  --dark-green: #37822c
+  --light-green: #70b85d
+  --yellow: #ffe69f
+  --tan: #ffa05e
+  --manilla: #ffe6d8
+  --creamsicle: #ff8562
+  --red-damask: #d86a4b
+  --fire: #ff6b47
+  --brown: #a36455
+  --dark-brown: #57423e
+  --dark-grey: #292828
+  --border-radius: 4px
+  --body-bg: var(--off-white)
+  --btn-bg: var(--blue)
+  --btn-border-color: var(--blue)
+  --btn-border-radius: 4px
+  --btn-font-size: 1.2rem
+  --btn-height: 35px
+  --btn-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28)
+  --btn-hover-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.24), 0 14px 50px 0 rgba(0, 0, 0, 0.19)
+  --btn-width: 120px
+  --card-shadow: 0 0 1px 0 rgba(66, 66, 66, 0.1), 0 0 6px 2px rgba(66, 66, 66, 0.15)
+  --circle-radius: 50%
+  --letter-spacing: 0.3px
+  --link-color: var(--blue)
+  --link-hover-color: var(--light-blue)
+  --link-visited-color: var(--dark-blue)
+  --pill-radius: 9999px
+  --input-height: 40px
+  --input-width: 300px
+  --shadow: 0 0 1px 0 rgba(66, 66, 66, 0.1), 0 0 3px 1px rgba(66, 66, 66, 0.15)
+  --shadow-raised: 0 0 20px rgba(0, 0, 0, 0.15)
+  --text-area-height: 150px
+  --text-area-width: 300px
+  --text-area-padding: 10px
+
+*
+  box-sizing: border-box
+  font-family: inherit
+  font-size: inherit
+  margin: 0
+  padding: 0
+
+html
+  font-size: 62.5%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+a
+  border-bottom: 1px solid var(--link-color)
+  color: var(--link-color)
+  text-decoration: none
+
+  &:hover
+    color: var(--link-hover-color)
+    border-bottom: 1px solid var(--link-hover-color)
+
+  &:visited
+    color: var(--link-visited-color)
+
+    &:hover
+      border-bottom-color: var(--dark-blue)
+
+body
+  background-color: #fafafa
+  height: 100%
+  letter-spacing: var(--letter-spacing)
+  position: relative
+  width: 100%
+
+button
+  background-color: var(--btn-bg)
+  border: 1px solid var(--btn-border-color)
+  border-radius: var(--btn-border-radius)
+  box-shadow: var(--btn-shadow)
+  color: white
+  cursor: pointer
+  font-size: var(--btn-font-size)
+  height: var(--btn-height)
+  letter-spacing: var(--letter-spacing)
+  outline: none
+  transition-property: background-color, box-shadow, color, transform
+  transition-duration: 500ms
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28)
+  transform-style: preserve-3d
+  width: var(--btn-width)
+
+  &:hover, &:focus
+    background-color: var(--dark-blue)
+    box-shadow: var(--btn-hover-shadow)
+    transform: perspective(100px) scale(1.1) translateY(-1px)
+
+  &:active
+    box-shadow: none
+
+input,select,textarea
+  border-radius: 0
+  border: none
+  box-shadow: var(--shadow)
+  font-size: 1.2rem
+  min-width: 300px
+  letter-spacing: var(--letter-spacing)
+  outline: none
+  width: 100vw
+  transition: box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28), transform 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
+
+
+label
+  border-bottom: 1px solid var(--dark-grey)
+  font-size: 1.2rem
+  margin-bottom: 7px
+
+input, select
+  height: var(--input-height)
+  padding: 5px 10px
+  text-align: center
+  width: var(--input-width)
+  &:focus
+    box-shadow: var(--btn-hover-shadow)
+    transform: perspective(100px) scale(1.03) translateY(-3px)
+
+textarea
+  height: var(--text-area-height)
+  padding: var(--text-area-padding)
+  resize: none
+  width: var(--text-area-width)
+  &:focus
+    box-shadow: var(--btn-hover-shadow)
+    transform: perspective(100px) scale(1.03) translateY(-10px)
+
+    
+
+@media only screen and (min-width: 400px)
+
+  input, select, textarea
+    border-radius: var(--border-radius)
+    text-align: start
+
+  label
+    border-bottom: 1px solid var(--dark-grey)
