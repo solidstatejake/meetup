@@ -5,7 +5,11 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "check": "svelte-check"
+    "check": "svelte-check",
+    "sass:watch": "node-sass --watch --recursive --indented-syntax --output-style='nested' public/sass --output='public/css'",
+    "sass:build": "node-sass --error-bell --recursive --indented-syntax --output-style='nested' public/sass --output='public/css'",
+    "scss:watch": "node-sass --watch --recursive --output-style='nested' public/sass --output='public/css'",
+    "scss:build": "node-sass --recursive --output-style='compressed' public/sass --output='public/css'"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
