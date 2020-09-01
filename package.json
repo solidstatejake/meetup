@@ -5,7 +5,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "check": "svelte-check",
+    "check": "svelte-check --watch",
     "sass:watch": "node-sass --watch --recursive --indented-syntax --output-style='nested' public/sass --output='public/css'",
     "sass:build": "node-sass --error-bell --recursive --indented-syntax --output-style='nested' public/sass --output='public/css'",
     "scss:watch": "node-sass --watch --recursive --output-style='nested' public/sass --output='public/css'",
