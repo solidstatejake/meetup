@@ -21,9 +21,13 @@
 <!-- 
   @component
   A text input or textarea component. 
-  @param string : label The label for the text input.
-  @param bool : textarea Is this an input or a textarea?
-  -->
+
+  @param label The label for the text input.
+  @param textarea : Is this an input or a textarea?
+  @param type : The type of the input.
+  @param required : Is this input/textarea required?
+  @param value : The value of the element. Meant to be bound (**not dynamically**) 
+-->
 <div class="form-control">
   <label for={id}>{label}</label>
   {#if textarea}
@@ -48,33 +52,40 @@
 
 </div>
 
-<style lang='sass'>
-  input, select, textarea
-    width: 100vw
+<style lang="scss">
+  input,
+  select,
+  textarea {
+    width: 100vw;
+  }
 
-  label
-    margin-bottom: 5px
+  label {
+    margin-bottom: 5px;
+  }
 
-  .form-control
-    align-items: center
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    width: 100%
+  .form-control {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-  @media only screen and (min-width: 400px)
-    input, select, textarea 
-      border-radius: var(--border-radius)
-      width: var(--input-width)
-    
+  @media only screen and (min-width: 400px) {
+    input,
+    select,
+    textarea {
+      border-radius: var(--border-radius);
+      width: var(--input-width);
+    }
 
     /*! HACK This is a hack. May have to target label for textarea w JavaScript */
-    label[for="description"] 
-      align-self: flex-start
-    
-    .form-control 
-      flex-direction: row
-    
-  
-</style>
+    label[for="description"] {
+      align-self: flex-start;
+    }
 
+    .form-control {
+      flex-direction: row;
+    }
+  }
+</style>
