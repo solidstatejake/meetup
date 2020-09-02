@@ -1,8 +1,7 @@
 <script lang="typescript">
-  // import { Icon } from "../types/icon.interface";
   import shortid from "shortid";
-  import I from "svelte-awesome";
-  import * as _icons from "svelte-awesome/icons";
+  import Icon from "svelte-awesome";
+  import * as icons from "svelte-awesome/icons";
 
   /* HACK: Brought the Icon interface here from icon.interface.ts 
   because svelte-check was throwing an error. Obviously prefer to 
@@ -22,6 +21,7 @@
     width?: string;
   }
 
+  export let circle = false;
   export let color: "primary" | "danger" | "success" = "primary";
   export let fontSize = "";
   export let height = "";
@@ -82,6 +82,7 @@
   {id}
   {type}
   class:center={justify === 'center'}
+  class:circle={circle && icon.justification === 'center'}
   class:danger={!outline && color === 'danger'}
   class:has-icon={icon.name !== 'Icon name'}
   class:inline
@@ -99,10 +100,11 @@
   style="height: {height}; width: {width}; font-size: {fontSize}; padding: {padding};
   {style}"
   on:click>
-  {#if icon}
+  <!-- icon.name is defaulted to 'Icon name', which is not an icon name. -->
+  {#if icon.name !== 'Icon name'}
     {#if icon.justification === 'left'}
-      <I
-        data={_icons[icon.name]}
+      <Icon
+        data={icons[icon.name]}
         class={icon.class}
         flip={icon.flip}
         label={icon.label}
@@ -112,8 +114,8 @@
         style={getIconStyles()} />
       <slot>Click me!</slot>
     {:else if icon.justification === 'center'}
-      <I
-        data={_icons[icon.name]}
+      <Icon
+        data={icons[icon.name]}
         class={icon.class}
         flip={icon.flip}
         label={icon.label}
@@ -123,8 +125,8 @@
         style={getIconStyles()} />
     {:else if icon.justification === 'right'}
       <slot>Click me!</slot>
-      <I
-        data={_icons[icon.name]}
+      <Icon
+        data={icons[icon.name]}
         class={icon.class}
         flip={icon.flip}
         label={icon.label}
@@ -151,6 +153,12 @@
     margin-right: auto;
   }
 
+  .circle {
+    border-radius: 50%;
+    height: var(--btn-height);
+    width: var(--btn-height);
+  }
+
   .danger {
     background-color: var(--danger);
   }
@@ -159,10 +167,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-
-    & svg {
-      margin-left: 5px;
-    }
   }
 
   .inline {
