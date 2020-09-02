@@ -1,9 +1,9 @@
 <script>
-  import Button from "./components/Button.svelte";
+  import Button from "./components/UI/Button.svelte";
   import Footer from "./components/Footer.svelte";
   import Grid from "./components/Grid.svelte";
-  import Input from "./components/Input.svelte";
-  import MeetupItem from "./components/MeetupItem.svelte";
+  import Input from "./components/UI/Input.svelte";
+  import MeetupItem from "./components/UI/MeetupItem.svelte";
   import Nav from "./components/Nav.svelte";
   import meetups from "./data.js";
 
