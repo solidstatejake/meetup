@@ -9,8 +9,8 @@
 
   let title = "Title",
     subtitle = "Subtitle",
-    imgUrl = "http://blasdha.io",
-    email = "ssj@makewithjake.io",
+    imgUrl = "http://fake.website.tomfoolery.co",
+    email = "example@email.com",
     description = "Description";
 
   let meetupList = meetups;
@@ -28,7 +28,6 @@
     meetupList = [newMeetup, ...meetupList];
     clearInputs();
   };
-
 </script>
 
 <Nav />
@@ -76,15 +75,13 @@
         <Button color="success" outline type="submit">Submit</Button>
       </div>
     </form>
-
   </div>
+  <Grid>
+    {#each meetupList as meetup (meetup)}
+      <MeetupItem {...meetup} />
+    {/each}
+  </Grid>
 </main>
-
-<Grid>
-  {#each meetupList as meetup (meetup)}
-    <MeetupItem {...meetup} />
-  {/each}
-</Grid>
 
 <Footer />
 
