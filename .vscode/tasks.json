@@ -1,0 +1,92 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+    {
+      "type": "npm",
+      "script": "check",
+      "problemMatcher": [],
+      "label": "npm: check",
+      "detail": "svelte-check --watch"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "npm: dev",
+      "detail": "rollup -c -w"
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build",
+      "detail": "rollup -c"
+    },
+    {
+      "type": "npm",
+      "script": "install",
+      "problemMatcher": [],
+      "label": "npm: install",
+      "detail": "install dependencies from package"
+    },
+    {
+      "type": "npm",
+      "script": "sass:build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: sass:build",
+      "detail": "node-sass --error-bell --recursive --indented-syntax --output-style='nested' public/sass --output='public/css'"
+    },
+    {
+      "type": "npm",
+      "script": "sass:watch",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: sass:watch",
+      "detail": "node-sass --watch --recursive --indented-syntax --output-style='nested' public/sass --output='public/css'"
+    },
+    {
+      "type": "npm",
+      "script": "scss:build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: scss:build",
+      "detail": "node-sass --recursive --output-style='compressed' public/sass --output='public/css'"
+    },
+    {
+      "type": "npm",
+      "script": "scss:watch",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: scss:watch",
+      "detail": "node-sass --watch --recursive --output-style='nested' public/sass --output='public/css'"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "sirv public"
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": "build",
+      "label": "tsc: build - tsconfig.json"
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "option": "watch",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "group": "build",
+      "label": "tsc: watch - tsconfig.json"
+    }
+  ]
+}
