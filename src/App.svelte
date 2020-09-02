@@ -1,10 +1,10 @@
 <script>
   import Button from "./components/UI/Button.svelte";
-  import Footer from "./components/Footer.svelte";
-  import Grid from "./components/Grid.svelte";
+  import Footer from "./components/containers/Footer.svelte";
+  import Grid from "./components/containers/Grid.svelte";
   import Input from "./components/UI/Input.svelte";
   import MeetupItem from "./components/UI/MeetupItem.svelte";
-  import Nav from "./components/Nav.svelte";
+  import Nav from "./components/containers/Nav.svelte";
   import meetups from "./data.js";
 
   let title = "Title",
