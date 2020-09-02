@@ -3,11 +3,12 @@
   import Button from "../UI/Button.svelte";
   import Input from "../UI/Input.svelte";
 
-  export let title = "Title";
-  export let subtitle = "Subtitle";
-  export let imgUrl = "http://blasdha.io";
-  export let email = "ssj@makewithjake.io";
-  export let description = "Description";
+
+  let title = "Title",
+    subtitle = "Subtitle",
+    imgUrl = "http://fake.website.tomfoolery.co",
+    email = "example@email.com",
+    description = "Description";
 
   const dispatch = createEventDispatcher();
 
@@ -18,11 +19,17 @@
     email = "";
     description = "";
   };
+
+  const createMeetup = () => {
+    const meetup = { title, subtitle, imgUrl, email, description };
+    dispatch("meetup-created", {meetup});
+  };
+
 </script>
 
 <div class="form-container">
 
-  <form on:submit|preventDefault={addMeetup}>
+  <form on:submit|preventDefault={createMeetup}>
     <Input
       type="text"
       label="Title"
@@ -64,3 +71,44 @@
   </form>
 
 </div>
+
+<style lang="scss">
+  form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: calc(2 * var(--nav-h));
+    height: 500px;
+    min-width: 300px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: 400px) {
+    form {
+      height: 400px;
+      width: 400px;
+    }
+
+    .btn-container {
+      justify-content: space-between;
+      margin-left: auto;
+      width: var(--text-area-width);
+    }
+  }
+  @media only screen and (min-width: 500px) {
+    form {
+      width: 450px;
+    }
+  }
+</style>
