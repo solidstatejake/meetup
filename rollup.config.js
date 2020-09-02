@@ -4,15 +4,14 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import autoPreprocess from 'svelte-preprocess';
+import visualizer from 'rollup-plugin-visualizer';
 
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
   let server;
 
-  function toExit() {
-    if ( server ) server.kill( 0 );
-  }
+  function toExit() {  if ( server ) server.kill( 0 ); }
 
   return {
     writeBundle() {
@@ -21,7 +20,6 @@ function serve() {
         stdio: [ 'ignore', 'inherit', 'inherit' ],
         shell: true
       } );
-
       process.on( 'SIGTERM', toExit );
       process.on( 'exit', toExit );
     }
@@ -32,45 +30,30 @@ export default {
   input: 'src/main.js',
   output: {
     sourcemap: true,
-    format: 'iife',
+    format: 'esm',
     name: 'app',
-    file: 'public/build/bundle.js'
+    dir: 'public/build'
   },
   plugins: [
     svelte( {
-      // enable run-time checks when not in production
       dev: !production,
-      // we'll extract any component CSS out into
-      // a separate file - better for performance
-      css: css => {
-        css.write( 'public/build/bundle.css' );
-      },
+      // @ts-ignore
+      css: css => { css.write( 'public/build/bundle.css' ); },
+      // @ts-ignore
       preprocess: autoPreprocess()
     } ),
 
-    // If you have external dependencies installed from
-    // npm, you'll most likely need these plugins. In
-    // some cases you'll need additional configuration -
-    // consult the documentation for details:
-    // https://github.com/rollup/plugins/tree/master/packages/commonjs
+    /*! Uncomment this line to visualize rollup bundle */ 
+    // visualizer( { open: true } ),
+
     resolve( {
       browser: true,
-      dedupe: [ 'svelte' ]
+      dedupe: [ 'svelte' ],
     } ),
     commonjs(),
-
-    // In dev mode, call `npm run start` once
-    // the bundle has been generated
     !production && serve(),
-
-    // Watch the `public` directory and refresh the
-    // browser on changes when not in production
     !production && livereload( 'public' ),
-
-    // If we're building for production (npm run build
-    // instead of npm run dev), minify
     production && terser(),
-
   ],
   watch: {
     clearScreen: false
