@@ -28,6 +28,7 @@
     meetupList = [newMeetup, ...meetupList];
     clearInputs();
   };
+
 </script>
 
 <Nav />
@@ -71,15 +72,13 @@
         on:input={({ target }) => (description = target.value)} />
 
       <div class="btn-container">
-        <Button outlineDanger on:click={clearInputs}>Clear</Button>
-        <Button outlineSuccess type="submit">Submit</Button>
+        <Button color="danger" outline on:click={clearInputs}>Clear</Button>
+        <Button color="success" outline type="submit">Submit</Button>
       </div>
     </form>
 
   </div>
 </main>
-
-<Footer />
 
 <Grid>
   {#each meetupList as meetup (meetup)}
@@ -87,6 +86,7 @@
   {/each}
 </Grid>
 
+<Footer />
 
 <style lang="scss">
   form {
