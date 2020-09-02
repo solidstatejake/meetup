@@ -2,7 +2,6 @@ const imgUrl = "https://picsum.photos/400";
 
 export default [
   {
-    id: "m1",
     title: "Coding Bootcamp",
     subtitle: "Learn web development the right way",
     description:
@@ -10,7 +9,6 @@ export default [
     imgUrl,
   },
   {
-    id: "m2",
     title: "Coding Bootcamp",
     subtitle: "Learn web development the right way",
     description:
@@ -18,7 +16,6 @@ export default [
     imgUrl,
   },
   {
-    id: "m3",
     title: "Coding Bootcamp",
     subtitle: "Learn web development the right way",
     description:
@@ -26,7 +23,6 @@ export default [
     imgUrl,
   },
   {
-    id: "m4",
     title: "Svelte vs React",
     subtitle: "Code off!",
     description:
