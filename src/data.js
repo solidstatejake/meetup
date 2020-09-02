@@ -1,32 +1,34 @@
-const imgUrl = "https://picsum.photos/400";
-
 export default [
   {
-    title: "Coding Bootcamp",
-    subtitle: "Learn web development the right way",
+    id: '159',
+    title: "School Sucks",
+    subtitle: "To graduate, or not to graduate?",
     description:
-      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-    imgUrl,
+      "A lot of very famous people didn't graduate college. Will you?",
+    imgUrl: "http://lorempixel.com/400/400/nightlife",
   },
   {
-    title: "Coding Bootcamp",
-    subtitle: "Learn web development the right way",
+    id: '190',
+    title: "Uncle Sam and the Internet",
+    subtitle: "Does freedom of speech equate to freedom of the internet?",
     description:
-      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-    imgUrl,
+      "Laudantium aut quia. Natus accusantium vel deserunt dolorem nihil eveniet. Modi nobis maiores rerum nulla omnis voluptas vitae nemo aliquid.",
+    imgUrl: "http://lorempixel.com/400/400/city",
   },
   {
-    title: "Coding Bootcamp",
-    subtitle: "Learn web development the right way",
+    id: '226',
+    title: "Redundant DevOps and You",
+    subtitle: "One Service to Find Them All...",
     description:
-      "Learning web development is hard! We've all been there. At this meetup, Laff Y. Taff will show new developers the ropes.",
-    imgUrl,
+      "Qui laboriosam ex et qui quibusdam minima alias maxime. Et facere qui sint at dicta. Officiis et laudantium vitae dolores sequi.",
+    imgUrl: "http://lorempixel.com/400/400/people",
   },
   {
+    id: '132',
     title: "Svelte vs React",
     subtitle: "Code off!",
     description:
       "Svelters and Reactors will go head-to-head in this meeting of the frontend minds! Join us to find out who can build a Yelp replica faster.",
-    imgUrl,
+    imgUrl: "http://lorempixel.com/400/400/animals"
   },
 ];
