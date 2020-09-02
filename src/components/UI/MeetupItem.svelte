@@ -14,7 +14,7 @@
 </script>
 
 <article {id}>
-
+<!-- TODO: perhaps lazy load? -->
   <div class="image">
     <img src={imgUrl} alt={title} />
   </div>
