@@ -1,8 +1,9 @@
 <script>
-  export let textarea = false;
   export let label = "";
-  export let type = "";
+  export let placeholder = "";
   export let required = false;
+  export let textarea = false;
+  export let type = "";
   export let value;
   const id = label
     .split(" ")
@@ -37,6 +38,7 @@
       name={id}
       spellcheck="true"
       {id}
+      {placeholder}
       {required}
       {value}
       on:input />
@@ -47,14 +49,13 @@
         where this component is consumed.
     -->
   {:else}
-    <input {type} {required} {id} {value} on:input />
+    <input {type} {required} {id} {value} {placeholder} on:input />
   {/if}
 
 </div>
 
 <style lang="scss">
   input,
-  select,
   textarea {
     width: 100vw;
   }
@@ -73,7 +74,6 @@
 
   @media only screen and (min-width: 400px) {
     input,
-    select,
     textarea {
       border-radius: var(--border-radius);
       width: var(--input-width);
