@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-  <h1>Awesome!</h1>
+  <h1>Meetup</h1>
 </nav>
 
 <style>
@@ -20,5 +20,6 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
   }
 </style>
