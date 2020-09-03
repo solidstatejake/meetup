@@ -3,13 +3,18 @@
   import Button from "../UI/Button.svelte";
   import Input from "../UI/Input.svelte";
 
-
-  let title = "Title",
+  let title = "",
+    subtitle = "",
+    imgUrl = "",
+    email = "",
+    description = "";
+  /*
+    let title = "Title", 
     subtitle = "Subtitle",
     imgUrl = "http://fake.website.tomfoolery.co",
     email = "example@email.com",
     description = "Description";
-
+ */
   const dispatch = createEventDispatcher();
 
   const clearInputs = () => {
@@ -22,23 +27,25 @@
 
   const createMeetup = () => {
     const meetup = { title, subtitle, imgUrl, email, description };
-    dispatch("meetup-created", {meetup});
+    dispatch("meetup-created", { meetup });
   };
-
 </script>
 
 <div class="form-container">
-
+  <h2 class="form-header">Create Meetup</h2>
   <form on:submit|preventDefault={createMeetup}>
     <Input
       type="text"
       label="Title"
+      placeholder="The Physics of Transistors"
       required
       value={title}
       on:input={({ target }) => (title = target.value)} />
+
     <Input
       type="text"
       label="Subtitle"
+      placeholder="And why they can't get smaller"
       required
       value={subtitle}
       on:input={({ target }) => (subtitle = target.value)} />
@@ -46,6 +53,7 @@
     <Input
       type="url"
       label="Image URL"
+      placeholder="https://some-image-url.com"
       required
       value={imgUrl}
       on:input={({ target }) => (imgUrl = target.value)} />
@@ -53,6 +61,7 @@
     <Input
       type="email"
       label="Email"
+      placeholder="username@example.com"
       required
       value={email}
       on:input={({ target }) => (email = target.value)} />
@@ -60,6 +69,7 @@
     <Input
       textarea
       label="Description"
+      placeholder="A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power. It is composed of semiconductor material usually with at least three terminals for connection to an external circuit..."
       required
       value={description}
       on:input={({ target }) => (description = target.value)} />
@@ -78,7 +88,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: calc(2 * var(--nav-h));
     height: 500px;
     min-width: 300px;
   }
@@ -88,10 +97,18 @@
     justify-content: space-around;
     width: 100%;
   }
+  .form {
+    &-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: calc(2 * var(--nav-h));
+    }
 
-  .form-container {
-    display: flex;
-    justify-content: center;
+    &-header {
+      margin-bottom: 3rem;
+    }
   }
 
   @media only screen and (min-width: 400px) {
