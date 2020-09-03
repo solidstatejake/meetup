@@ -13,11 +13,12 @@
   --slate-blue: #4d7d95;
   --deep-blue: #006a9e;
   --ice: #c8f7ff;
+  --info: #ffe83b;
   --goblin-green: #458a59;
   --dark-green: #37822c;
   --light-green: #70b85d;
   --yellow: #ffe69f;
-  --tan: #ffa05e;
+  --warning: #ffa05e;
   --manilla: #ffe6d8;
   --creamsicle: #ff8562;
   --red-damask: #d86a4b;
@@ -116,7 +117,6 @@ input, select, textarea {
   transition: box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28), transform 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
 
 label {
-  border-bottom: 1px solid var(--dark-grey);
   font-size: 1.2rem;
   margin-bottom: 7px; }
 
@@ -136,7 +136,7 @@ textarea {
   width: var(--text-area-width); }
   textarea:focus {
     box-shadow: var(--btn-hover-shadow);
-    transform: perspective(100px) scale(1.03) translateY(-10px); }
+    transform: perspective(100px) scale(1.03) translateY(-1px); }
 
 @media only screen and (min-width: 400px) {
   input, select, textarea {
