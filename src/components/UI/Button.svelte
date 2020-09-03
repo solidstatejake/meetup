@@ -84,6 +84,7 @@
   {type}
   class:center={justify === 'center'}
   class:circle={circle && icon.justification === 'center'}
+  class:circle-small={circle && small && icon.justification === 'center'}
   class:danger={!outline && color === 'danger'}
   class:has-icon={icon.name !== 'Icon name'}
   class:info={!outline && color === 'info'}
@@ -99,7 +100,7 @@
   class:pill
   class:primary={!outline && color === 'primary'}
   class:right={justify === 'right'}
-  class:small
+  class:small={small && icon.justification !== 'center'}
   class:success={!outline && color === 'success'}
   class:warning={!outline && color === 'warning'}
   style="height: {height}; width: {width}; font-size: {fontSize}; padding: {padding};
@@ -155,6 +156,12 @@
     border-radius: 50%;
     height: var(--btn-height);
     width: var(--btn-height);
+
+    &-small {
+      height: min-content;
+      width: min-content;
+      padding: 5px;
+    }
   }
 
   .danger {
@@ -171,7 +178,7 @@
   .info {
     background-color: var(--info);
     border-color: var(--info);
-    text-shadow: 0 0 5px rgba(0,0,0,0.25);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   }
 
   .inline {
