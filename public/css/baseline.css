@@ -136,7 +136,7 @@ textarea {
   width: var(--text-area-width); }
   textarea:focus {
     box-shadow: var(--btn-hover-shadow);
-    transform: perspective(100px) scale(1.03) translateY(-1px); }
+    transform: perspective(100px) scale(1.03) translateY(-3px); }
 
 @media only screen and (min-width: 400px) {
   input, select, textarea {
