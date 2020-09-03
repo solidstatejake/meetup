@@ -11,16 +11,20 @@
   const addMeetup = (event) => {
     meetupList = [event.detail.meetup, ...meetupList];
   };
+
+  const removeMeetup = (event) => {
+    meetupList = meetupList.filter((meetup) => meetup.id !== event.detail.meetupId );
+  };
 </script>
 
 <Nav />
 
 <main>
-  <MeetupForm on:meetup-created={(e)=>(addMeetup(e))} />
+  <MeetupForm on:meetup-created={(e) => addMeetup(e)} />
 
   <Grid>
     {#each meetupList as meetup (meetup)}
-      <MeetupItem {...meetup} />
+      <MeetupItem {...meetup} on:meetup-deleted={removeMeetup} />
     {/each}
   </Grid>
 </main>

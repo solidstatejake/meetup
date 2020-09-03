@@ -1,20 +1,25 @@
 <script>
   import Button from "./Button.svelte";
+  import { createEventDispatcher } from "svelte";
+  import shortid from "shortid";
 
   export let title;
   export let subtitle;
   export let description;
   export let imgUrl;
-  const id = title
-    .split(" ")
-    .join("-")
-    .toLowerCase()
-    .replace(/\W/g, "")
-    .replace("_", "");
+  export let id;
+
+  const dispatch = createEventDispatcher();
+
+  const deleteMeetup = () => {
+    if (confirm("Are you sure you would like to delete this meetup?")) {
+      dispatch("meetup-deleted", { meetupId: id });
+    }
+  };
 </script>
 
 <article {id}>
-<!-- TODO: perhaps lazy load? -->
+  <!-- TODO: perhaps lazy load? -->
   <div class="image">
     <img src={imgUrl} alt={title} />
   </div>
@@ -31,7 +36,9 @@
     </div>
 
     <div class="footer">
-      <Button outline pill small>Share</Button>
+      <Button color="danger" small pill on:click={deleteMeetup}>Delete</Button>
+      <Button color="info" small pill>Edit</Button>
+      <Button color="primary" small pill>Share</Button>
     </div>
 
   </div>
@@ -83,6 +90,7 @@
     height: 100%;
     justify-content: flex-end;
     width: 100%;
+    gap: 1rem;
   }
 
   .icon {

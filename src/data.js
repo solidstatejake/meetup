@@ -10,7 +10,7 @@ export default [
   {
     id: '190',
     title: "Uncle Sam and the Internet",
-    subtitle: "Does freedom of speech equate to freedom of the internet?",
+    subtitle: "freedomOfSpeech === freedomOfInternet?",
     description:
       "Laudantium aut quia. Natus accusantium vel deserunt dolorem nihil eveniet. Modi nobis maiores rerum nulla omnis voluptas vitae nemo aliquid.",
     imgUrl: "http://lorempixel.com/400/400/city",
