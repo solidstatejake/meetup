@@ -103,6 +103,15 @@
       border-radius: 3px;
       box-shadow: var(--card-shadow);
       margin-bottom: 0;
+      transition-property: background-color, box-shadow, color, transform;
+      transition-duration: 300ms;
+      transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      transform-style: preserve-3d;
+
+      &:hover {
+        transform: perspective(100px) scale(1.03) translateY(-5px);
+        box-shadow: var(--btn-hover-shadow);
+      }
     }
   }
   @media only screen and (min-width: 880px) {
