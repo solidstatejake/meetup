@@ -22,7 +22,8 @@
   }
 
   export let circle = false;
-  export let color: "primary" | "danger" | "success" = "primary";
+  export let color: "primary" | "danger" | "info" | "success" | "warning" =
+    "primary";
   export let fontSize = "";
   export let height = "";
   export let href = "";
@@ -85,18 +86,22 @@
   class:circle={circle && icon.justification === 'center'}
   class:danger={!outline && color === 'danger'}
   class:has-icon={icon.name !== 'Icon name'}
+  class:info={!outline && color === 'info'}
   class:inline
   class:inline-block={inlineBlock}
   class:left={justify === 'left'}
   class:link={href}
   class:outline
   class:outline-danger={outline && color === 'danger'}
+  class:outline-info={outline && color === 'info'}
   class:outline-success={outline && color === 'success'}
+  class:outline-warning={outline && color === 'warning'}
   class:pill
   class:primary={!outline && color === 'primary'}
   class:right={justify === 'right'}
   class:small
   class:success={!outline && color === 'success'}
+  class:warning={!outline && color === 'warning'}
   style="height: {height}; width: {width}; font-size: {fontSize}; padding: {padding};
   {style}"
   on:click>
@@ -140,14 +145,7 @@
   {/if}
 </button>
 
-<!--
-  ### SCRIPT ###
--->
-
 <style lang="scss">
-  /* 
-  ### STYLE ###
-   */
   .center {
     margin-left: auto;
     margin-right: auto;
@@ -161,12 +159,19 @@
 
   .danger {
     background-color: var(--danger);
+    border-color: var(--danger);
   }
 
   .has-icon {
     align-items: center;
     display: flex;
     justify-content: center;
+  }
+
+  .info {
+    background-color: var(--info);
+    border-color: var(--info);
+    text-shadow: 0 0 5px rgba(0,0,0,0.25);
   }
 
   .inline {
@@ -208,10 +213,22 @@
       color: var(--danger);
     }
 
+    &-info {
+      background-color: var(--body-bg);
+      border: 2px solid var(--info);
+      color: var(--info);
+    }
+
     &-success {
       background-color: var(--body-bg);
       border: 2px solid var(--success);
       color: var(--success);
+    }
+
+    &-warning {
+      background-color: var(--body-bg);
+      border: 2px solid var(--warning);
+      color: var(--warning);
     }
   }
 
@@ -221,6 +238,7 @@
 
   .primary {
     background-color: var(--blue);
+    border-color: var(--blue);
   }
 
   .right {
@@ -235,5 +253,11 @@
 
   .success {
     background-color: var(--success);
+    border-color: var(--success);
+  }
+
+  .warning {
+    background-color: var(--warning);
+    border-color: var(--warning);
   }
 </style>
