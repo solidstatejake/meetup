@@ -1,8 +1,9 @@
 <script>
-
+  import Menu from './Menu.svelte';
 </script>
 
 <nav>
+  <Menu/>
   <h1>Meetup</h1>
 </nav>
 
@@ -15,11 +16,16 @@
     display: flex;
     font-size: var(--font-size-nav-sm);
     height: var(--nav-h);
-    justify-content: center;
+    justify-content: start;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1;
+  }
+
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
