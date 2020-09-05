@@ -3,18 +3,18 @@
   import Button from "../UI/Button.svelte";
   import Input from "../UI/Input.svelte";
 
-  let title = "",
+  /* let title = "",
     subtitle = "",
     imgUrl = "",
     email = "",
-    description = "";
-  /*
+    description = ""; */
+  
     let title = "Title", 
     subtitle = "Subtitle",
     imgUrl = "http://fake.website.tomfoolery.co",
     email = "example@email.com",
     description = "Description";
- */
+
   const dispatch = createEventDispatcher();
 
   const clearInputs = () => {

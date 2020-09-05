@@ -1,7 +1,7 @@
 <script>
-  import MenuIcon from "../UI/MenuIcon.svelte";
+  import MenuIcon from "../menu/MenuIcon.svelte";
   import { createEventDispatcher } from "svelte";
-	import { menu } from './../../stores.js';
+  import { menu } from "../../stores.js";
 
   const dispatch = createEventDispatcher();
 
@@ -33,12 +33,6 @@
 </div>
 
 <style lang="scss">
-  .menu-icon {
-    margin-left: 2rem;
-    position: fixed;
-    z-index: 4;
-  }
-
   .menu {
     background-color: var(--off-white);
     color: #000;
@@ -50,6 +44,25 @@
     top: 0;
     transition: margin-left 300ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
     width: 40rem;
+
+    &-icon {
+      margin-left: 2rem;
+      position: fixed;
+      z-index: 4;
+    }
+
+    &-is-open {
+      box-shadow: var(--btn-hover-shadow);
+      margin-left: -10rem;
+      z-index: 3;
+    }
+
+    &-item {
+      transition: transform 100ms ease-in;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
   }
 
   ul {
@@ -60,11 +73,5 @@
     height: 100%;
     justify-content: center;
     list-style: none;
-  }
-
-  .menu-is-open {
-    box-shadow: var(--btn-hover-shadow);
-    margin-left: -10rem;
-    z-index: 3;
   }
 </style>

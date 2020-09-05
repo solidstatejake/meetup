@@ -1,9 +1,10 @@
 <script>
-  import CreateMeetupModal from "./components/containers/CreateMeetupModal.svelte";
-  import Footer from "./components/containers/Footer.svelte";
-  import Grid from "./components/containers/Grid.svelte";
-  import MeetupItem from "./components/UI/MeetupItem.svelte";
-  import Nav from "./components/containers/Nav.svelte";
+  import MeetupForm from './components/Meetups/MeetupForm.svelte';
+  import Modal from "./components/Meetups/Modal.svelte";
+  import Footer from "./components/layout/Footer.svelte";
+  import Grid from "./components/layout/Grid.svelte";
+  import MeetupItem from "./components/Meetups/MeetupItem.svelte";
+  import Nav from "./components/layout/Nav.svelte";
   import meetups from "./data.js";
   import { menu } from "./stores.js";
 

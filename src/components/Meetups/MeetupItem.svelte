@@ -1,5 +1,5 @@
 <script>
-  import Button from "./Button.svelte";
+  import Button from "../UI/Button.svelte";
   import { createEventDispatcher } from "svelte";
 
   export let title;

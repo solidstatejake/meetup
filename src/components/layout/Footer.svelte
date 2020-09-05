@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <footer> &copy; solidstate::designco </footer>
 
 <style lang='sass'>
