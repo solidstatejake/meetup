@@ -67,5 +67,13 @@
     top: 50vh;
     transform: translate(-50%, -50%);
     z-index: $modal-z-index;
+    height: 100vh;
   }
+
+  @media only screen and (min-width: 400px) {
+    .modal { 
+      height: auto;
+    }
+  }
+
 </style>

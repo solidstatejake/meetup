@@ -58,6 +58,7 @@
   input,
   textarea {
     width: 100vw;
+    transition: width 300ms ease-in;
   }
 
   label {

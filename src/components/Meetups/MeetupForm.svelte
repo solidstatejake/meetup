@@ -7,8 +7,8 @@
     subtitle = "",
     imgUrl = "",
     description = ""; */
-  
-    let title = "Title", 
+
+  let title = "Title",
     subtitle = "Subtitle",
     imgUrl = "http://fake.website.tomfoolery.co",
     description = "Description";
@@ -58,7 +58,10 @@
     <Input
       textarea
       label="Description"
-      placeholder="A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power. It is composed of semiconductor material usually with at least three terminals for connection to an external circuit..."
+      placeholder={"A transistor is a semiconductor device used to amplify or" +
+      "switch electronic signals and electrical power. It is composed of" +
+      "semiconductor material usually with at least three terminals for" +
+      "connection to an external circuit..."}
       required
       value={description}
       on:input={({ target }) => (description = target.value)} />
@@ -79,6 +82,11 @@
     justify-content: space-between;
     height: 500px;
     min-width: 300px;
+    transition: {
+      property: height, width;
+      duration: 300ms;
+      timing-function: ease-in;
+    }
   }
 
   .btn-container {
