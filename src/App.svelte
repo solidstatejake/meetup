@@ -9,10 +9,11 @@
   import { menu } from "./stores.js";
 
   let meetupList = meetups;
-  let createMeetupModalIsOpen = false;
+  let createMeetupModalIsOpen = true;
 
-  const addMeetup = (event) => {
+  const createMeetup = (event) => {
     meetupList = [event.detail.meetup, ...meetupList];
+    createMeetupModalIsOpen = false;
   };
 
   const removeMeetup = (event) => {
@@ -23,7 +24,7 @@
 
   const openCreateMeetupModal = () => {
     menu.close();
-    createMeetupModalIsOpen = !createMeetupModalIsOpen;
+    createMeetupModalIsOpen = true;
   };
 </script>
 
