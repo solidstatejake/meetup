@@ -103,7 +103,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-top: calc(2 * var(--nav-h));
     }
 
     &-header {

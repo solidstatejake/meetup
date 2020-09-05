@@ -18,7 +18,8 @@
     height: var(--nav-h);
     justify-content: start;
     left: 0;
-    position: fixed;
+    margin-bottom: 3rem;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 1;
