@@ -29,13 +29,12 @@
 </script>
 
 {#if createMeetupModalIsOpen}
-  <CreateMeetupModal
-    bind:open={createMeetupModalIsOpen}
-    on:meetup-created={(e) => addMeetup(e)} />
+  <Modal bind:open={createMeetupModalIsOpen}>
+    <MeetupForm on:meetup-created={(e) => createMeetup(e)} />
+  </Modal>
 {/if}
 
-<Nav
-  on:open-create-meetup-modal={openCreateMeetupModal} />
+<Nav on:open-create-meetup-modal={openCreateMeetupModal} />
 
 <main>
   <Grid>
