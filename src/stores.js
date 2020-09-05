@@ -10,4 +10,6 @@ const createMenuState = () => {
     close: () => set( false )
   };
 };
+
+export const currentMeetup = writable(null);
 export const menu = createMenuState();
