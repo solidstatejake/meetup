@@ -35,7 +35,7 @@
 <style lang="scss">
   .menu-icon {
     margin-left: 2rem;
-    position: absolute;
+    position: fixed;
     z-index: 4;
   }
 
@@ -46,7 +46,7 @@
     left: 0;
     margin-left: -50rem;
     padding-left: 18rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     transition: margin-left 300ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
     width: 40rem;
