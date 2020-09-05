@@ -1,20 +1,15 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import { currentMeetup } from "./../../stores.js";
   import Button from "../UI/Button.svelte";
   import Input from "../UI/Input.svelte";
 
-  /* let title = "",
-    subtitle = "",
-    imgUrl = "",
-    description = ""; */
-  
-    let title = "Title", 
-    subtitle = "Subtitle",
-    imgUrl = "http://fake.website.tomfoolery.co",
-    description = "Description";
+  /* Declarations */
 
   const dispatch = createEventDispatcher();
+  let  { title, subtitle, imgUrl, description, id } = $currentMeetup;
 
+  /* Functions */
   const clearInputs = () => {
     title = "";
     subtitle = "";
@@ -22,15 +17,15 @@
     description = "";
   };
 
-  const createMeetup = () => {
-    const meetup = { title, subtitle, imgUrl, description };
-    dispatch("meetup-created", { meetup });
-  };
+  const editMeetup = () =>
+    dispatch("meetup-edited", {
+      meetup: { title, subtitle, imgUrl, description, id },
+    });
 </script>
 
 <div class="form-container">
   <h2 class="form-header">Create Meetup</h2>
-  <form on:submit|preventDefault={createMeetup}>
+  <form on:submit|preventDefault={editMeetup}>
     <Input
       type="text"
       label="Title"
@@ -54,7 +49,15 @@
       required
       value={imgUrl}
       on:input={({ target }) => (imgUrl = target.value)} />
-
+<!-- 
+    <Input
+      type="email"
+      label="Email"
+      placeholder="username@example.com"
+      required
+      value={email}
+      on:input={({ target }) => (email = target.value)} />
+ -->
     <Input
       textarea
       label="Description"

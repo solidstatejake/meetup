@@ -1,6 +1,7 @@
 <script>
-  import Button from "../UI/Button.svelte";
+	import { currentMeetup } from './../../stores.js';
   import { createEventDispatcher } from "svelte";
+  import Button from "../UI/Button.svelte";
 
   export let title;
   export let subtitle;
@@ -10,9 +11,14 @@
 
   const dispatch = createEventDispatcher();
 
-  const deleteMeetup = () => {
+  const editMeetup = () => {
+    $currentMeetup = { title, subtitle, description, imgUrl, id };
+    dispatch('edit-meetup');
+  }
+
+  const destroyMeetup = () => {
     if (confirm("Are you sure you would like to delete this meetup?")) {
-      dispatch("meetup-deleted", { meetupId: id });
+      dispatch("destroy-meetup", { meetupId: id });
     }
   };
 </script>
@@ -40,14 +46,15 @@
         small
         circle
         icon={{ justification: 'center', label: 'btn', name: 'trash', color: '#333333' }}
-        on:click=     {deleteMeetup}>
+        on:click={destroyMeetup}>
         Delete
       </Button>
       <Button
         color="info"
         small
         circle
-        icon={{ justification: 'center', label: 'btn', name: 'pencil', color: '#333333' }}>
+        icon={{ justification: 'center', label: 'btn', name: 'pencil', color: '#333333' }}
+        on:click={editMeetup}>
         Edit
       </Button>
       <Button
