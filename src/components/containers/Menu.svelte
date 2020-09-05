@@ -1,15 +1,18 @@
 <script>
   import MenuIcon from "../UI/MenuIcon.svelte";
+  import { createEventDispatcher } from "svelte";
+	import { menu } from './../../stores.js';
 
-  let open = false;
-  const toggleMenu = () => open = !open;
+  const dispatch = createEventDispatcher();
+
+  const openCreateMeetupModal = () => dispatch("open-create-meetup-modal");
 </script>
 
-<span class="menu-icon" on:click={toggleMenu}>
-  <MenuIcon {open} />
+<span class="menu-icon" on:click={menu.toggle}>
+  <MenuIcon menuIsOpen={$menu} />
 </span>
 
-<div class="menu" role="menu" class:open>
+<div class="menu" role="menu" class:menu-is-open={$menu}>
   <ul>
     <li class="menu-item" role="menuitem">
       <a href="#">Home</a>
@@ -23,7 +26,7 @@
     <li class="menu-item" role="menuitem">
       <a href="#">Log in / Register</a>
     </li>
-    <li class="menu-item" role="menuitem">
+    <li class="menu-item" role="menuitem" on:click={openCreateMeetupModal}>
       <a href="#">Create Meetup</a>
     </li>
   </ul>
@@ -59,7 +62,7 @@
     list-style: none;
   }
 
-  .open {
+  .menu-is-open {
     box-shadow: var(--btn-hover-shadow);
     margin-left: -10rem;
     z-index: 3;

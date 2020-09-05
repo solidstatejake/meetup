@@ -1,9 +1,9 @@
 <script>
-  import Menu from './Menu.svelte';
+  import Menu from "./Menu.svelte";
 </script>
 
 <nav>
-  <Menu/>
+  <Menu on:open-create-meetup-modal />
   <h1>Meetup</h1>
 </nav>
 
