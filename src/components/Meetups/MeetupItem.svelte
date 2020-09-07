@@ -8,7 +8,7 @@
   export let description;
   export let imgUrl;
   export let id;
-
+  
   const dispatch = createEventDispatcher();
 
   const editMeetup = () => {
@@ -113,10 +113,6 @@
     width: 100%
     gap: 1rem
   
-  .icon 
-    margin-left: auto
-    margin-top: auto
-  
   @media only screen and (min-width: 400px) 
     article 
       border-radius: 3px
@@ -131,6 +127,5 @@
   @media only screen and (min-width: 880px) 
     article 
       width: 400px
-    
   
 </style>

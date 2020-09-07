@@ -7,7 +7,7 @@
   /* Declarations */
 
   const dispatch = createEventDispatcher();
-  let  { title, subtitle, imgUrl, description, id } = $currentMeetup;
+  let { title, subtitle, imgUrl, description, id } = $currentMeetup;
 
   /* Functions */
   const clearInputs = () => {
@@ -24,7 +24,7 @@
 </script>
 
 <div class="form-container">
-  <h2 class="form-header">Create Meetup</h2>
+  <h2 class="form-header">Edit Meetup</h2>
   <form on:submit|preventDefault={editMeetup}>
     <Input
       type="text"
@@ -49,19 +49,11 @@
       required
       value={imgUrl}
       on:input={({ target }) => (imgUrl = target.value)} />
-<!-- 
-    <Input
-      type="email"
-      label="Email"
-      placeholder="username@example.com"
-      required
-      value={email}
-      on:input={({ target }) => (email = target.value)} />
- -->
+
     <Input
       textarea
       label="Description"
-      placeholder="A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power. It is composed of semiconductor material usually with at least three terminals for connection to an external circuit..."
+      placeholder={'A transistor is a semiconductor device used to amplify or switch electronic signals and electrical' + 'power. It is composed of semiconductor material usually with at least three terminals for' + ' connection to an external circuit...'}
       required
       value={description}
       on:input={({ target }) => (description = target.value)} />
@@ -114,6 +106,7 @@
       width: var(--text-area-width);
     }
   }
+
   @media only screen and (min-width: 500px) {
     form {
       width: 450px;
