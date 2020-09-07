@@ -34,7 +34,7 @@
 
 <style lang="scss">
   .menu {
-    background-color: var(--off-white);
+    background-color: var(--almost-white);
     color: #000;
     height: 42rem;
     left: 0;

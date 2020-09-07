@@ -59,7 +59,7 @@
   }
   
   .modal {
-    background-color: var(--off-white);
+    background-color: white;
     box-shadow: var(--btn-hover-shadow);
     left: 50vw;
     padding: 3rem;

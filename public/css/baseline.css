@@ -1,7 +1,9 @@
 :root {
   --awesome: #123123;
-  --off-white: #fafafa;
-  --danger: #ea4848;
+  --off-white: #EDE9D0;
+  --almost-white: #FAFAFA;
+  --danger: #F75959;
+  --red: #ea4848;
   --success: #2f982f;
   --blue: #3a96f0;
   --light-blue: #59a6f3;
@@ -27,7 +29,7 @@
   --dark-brown: #57423e;
   --dark-grey: #292828;
   --border-radius: 4px;
-  --body-bg: var(--off-white);
+  --body-bg: var(--almost-white);
   --btn-bg: var(--blue);
   --btn-border-color: var(--blue);
   --btn-border-radius: 4px;
